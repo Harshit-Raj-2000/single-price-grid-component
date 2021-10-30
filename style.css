@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --yellow: hsl(71, 73%, 54%);
+    --gray: hsl(204, 43%, 93%);
+    --grayblue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 200px;
+    justify-content: center;
+    align-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    background-color: var(--gray);
+}
+
+.top-row {
+    background-color: hsl(0, 0%, 100%);
+    grid-row: 1;
+    grid-column: span 2;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0px 8px 20px rgb(88, 87, 87, 0.2);
+}
+
+.title {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.head-text {
+    color: var(--yellow);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.body-text {
+    color: var(--grayblue);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.subscription {
+    background-color: var(--cyan);
+    grid-row: 2;
+    grid-column: span 1;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color:hsl(0, 0%, 100%, 0.8);
+    border-radius: 0 0 0 8px;
+    box-shadow: 0px 8px 20px rgb(88, 87, 87, 0.2);
+
+}
+
+.sub-head {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.sub-cost {
+    font-weight: 700;
+    color:hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+}
+
+.small-text {
+    font-weight: 400;
+    color: hsl(204, 43%, 93%, 0.5);
+    font-size: 0.9rem;
+}
+
+.sub-access {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.sub-button {
+    font-weight: 700;
+    color:hsl(0, 0%, 100%);
+    background-color: var(--yellow);
+    padding: 12px 10px;
+    box-shadow: 0px 8px 10px rgb(88, 87, 87, 0.4);
+    font-size: 1rem;
+    border: 0px;
+    border-radius: 4px;
+}
+
+.why {
+    background-color: hsl(179, 62%, 43%, 0.8);
+    grid-row: 2;
+    grid-column: span 1;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 0px 0px 8px 0;
+    color:hsl(0, 0%, 100%, 0.8);
+    box-shadow: 0px 8px 20px rgb(88, 87, 87, 0.2);
+
+}
+
+.why-title{
+    font-weight:700;
+    font-size: 1.1rem;
+}
+
+.why-text{
+    font-weight: 400;
+    font-size: 0.8rem;
+    color:hsl(0, 0%, 100%, 0.7)
+}
+
+.why-text li{
+    list-style: none;
+}
+
+@media screen and (max-width: 650px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width : auto;
+        height: 130vh;
+    }
+
+    .subscription, .top-row, .why{
+        width: 80%;
+        height: 40%;
+        min-width: 245px;
+    }
+
+    .top-row{
+        border-radius: 8px 8px 0px 0px;
+        margin-top : 80px;
+    }
+
+    .subscription{
+        border-radius: 0px;
+    }
+
+    .why{
+        border-radius: 0 0 8px 8px;
+        margin-bottom : 80px;
+
+    }
+    
+}
